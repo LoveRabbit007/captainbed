@@ -9,14 +9,14 @@ import skimage.transform as tf  # 这里我们用它来缩放图片
 
 def load_dataset():
     # 加载训练数据
-    train_dataset = h5py.File('first_blood/datasets/train_catvnoncat.h5', "r")
+    train_dataset = h5py.File('datasets/train_catvnoncat.h5', "r")
     # 从训练数据中提取出图片的特征数据
     train_set_x_orig = np.array(train_dataset["train_set_x"][:])
     # 从训练数据中提取出图片的标签数据
     train_set_y_orig = np.array(train_dataset["train_set_y"][:])
 
     # 加载测试数据
-    test_dataset = h5py.File('first_blood/datasets/test_catvnoncat.h5', "r")
+    test_dataset = h5py.File('datasets/test_catvnoncat.h5', "r")
     test_set_x_orig = np.array(test_dataset["test_set_x"][:])
     test_set_y_orig = np.array(test_dataset["test_set_y"][:])
 
@@ -265,7 +265,7 @@ def result_cat():
 # 预测图片是否是猫
 def predicted():
     my_image = "my_image1.jpg"
-    fname = "first_blood/images/" + my_image
+    fname = "images/" + my_image
 
     image = np.array(plt.imread(fname))
     my_image = tf.resize(image, (num_px, num_px), mode='reflect').reshape((1, num_px * num_px * 3)).T
