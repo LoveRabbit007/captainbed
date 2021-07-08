@@ -6,7 +6,7 @@ import sklearn
 import sklearn.datasets
 import scipy.io
 from testCases import *
-
+import pip
 plt.rcParams['figure.figsize'] = (7.0, 4.0)
 plt.rcParams['image.interpolation'] = 'nearest'
 plt.rcParams['image.cmap'] = 'gray'
@@ -242,4 +242,4 @@ def backward_propagation_with_dropout_test():
 
 
 if __name__ == '__main__':
-    backward_propagation_with_dropout_test()
+     backward_propagation_with_dropout_test()
