@@ -150,7 +150,7 @@ def gradient_check_n_print():
 
 
 if __name__ == '__main__':
-    forward_propagation_print()
-    backward_propagation_print()
-    gradient_check_print()
+    # forward_propagation_print()
+    # backward_propagation_print()
+    # gradient_check_print()
     gradient_check_n_print()
